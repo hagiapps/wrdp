@@ -1,7 +1,9 @@
 <?php
 echo $_SERVER['REMOTE_ADDR'] ;
 //10.191.78.80
-if($_SERVER['REMOTE_ADDR'] != '10.191.78.80') die('access denied');
+
+//phpinfo();
+//if($_SERVER['REMOTE_ADDR'] != '10.191.78.80') die('access denied');
 if (isset($_REQUEST["f"])){
 	$file = $_REQUEST["f"];
 	if (!empty($file)){
