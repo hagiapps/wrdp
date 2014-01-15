@@ -90,6 +90,7 @@
 		$GLOBALS['pg4wp_conn'] = pg_connect($pg_connstr);
 		
 		echo "<pre>";
+		var_dump($_REQUEST['dbname']);
 		var_dump($pg_connstr);
 		echo "<pre>";
 		
