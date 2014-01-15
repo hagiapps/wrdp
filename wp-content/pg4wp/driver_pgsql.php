@@ -89,6 +89,10 @@
 
 		$GLOBALS['pg4wp_conn'] = pg_connect($pg_connstr);
 		
+		echo "<pre>";
+		var_dump($pg_connstr);
+		echo "<pre>";
+		
 		if( $GLOBALS['pg4wp_conn'])
 		{
 			$ver = pg_version($GLOBALS['pg4wp_conn']);
