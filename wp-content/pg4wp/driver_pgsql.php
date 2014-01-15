@@ -75,9 +75,14 @@
 			wp_die( 'Connecting to your PostgreSQL database without a password is considered insecure.
 					<br />If you want to do it anyway, please set "PG4WP_INSECURE" to true in your "db.php" file.' );
 		
+		$dbname = 'template1';
+		if (isset($_REQUEST['dbname'])){
+			$dbname = $_REQUEST['dbname'];
+		}
+		
 		// While installing, we test the connection to 'template1' (as we don't know the effective dbname yet)
 		if( defined('WP_INSTALLING') && WP_INSTALLING)
-			return wpsql_select_db( 'template1');
+			return wpsql_select_db( $dbname );
 		
 		return 1;
 	}
