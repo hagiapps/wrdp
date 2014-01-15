@@ -5,6 +5,10 @@
  * @author	Hawk__, www.hawkix.net
  */
 
+error_reporting(E_ALL);
+
+ini_set('display_errors', '1');
+ 
 /**
 * Provides a driver for PostgreSQL
 *
