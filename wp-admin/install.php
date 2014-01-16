@@ -78,11 +78,15 @@ function display_header() {
  */
 function display_setup_form( $error = null ) {
 	global $wpdb; 
+
+	$user_table = ( $wpdb->get_var("SHOW TABLES LIKE '$wpdb->users'") != null );
+	
 	echo "<pre>";
 	var_dump($wpdb->users);
+	var_dump($user_table);
+	var_dump($wpdb->get_var("SHOW TABLES LIKE '$wpdb->users'"));
 	echo "</pre>";
-	$user_table = ( $wpdb->get_var("SHOW TABLES LIKE '$wpdb->users'") != null );
-
+	
 	// Ensure that Blogs appear in search engines by default
 	$blog_public = 1;
 	if ( ! empty( $_POST ) )
