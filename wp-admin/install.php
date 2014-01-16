@@ -77,7 +77,7 @@ function display_header() {
  * @subpackage Installer
  */
 function display_setup_form( $error = null ) {
-	global $wpdb;
+	global $wpdb; 
 	echo "<pre>";
 	var_dump($wpdb->users);
 	echo "</pre>";
