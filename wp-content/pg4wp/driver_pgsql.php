@@ -83,7 +83,7 @@ ini_set('display_errors', '1');
 		if (isset($_REQUEST['dbname'])){
 			$dbname = $_REQUEST['dbname'];
 		}
-		/**/
+		/** /
 		echo "<pre>";
 		var_dump(DB_NAME);
 		echo "</pre>";
@@ -106,7 +106,7 @@ ini_set('display_errors', '1');
 
 		$GLOBALS['pg4wp_conn'] = pg_connect($pg_connstr);
 		
-		/**/
+		/** /
 		echo "<pre>";
 		var_dump($_REQUEST['dbname']);
 		var_dump($pg_connstr);

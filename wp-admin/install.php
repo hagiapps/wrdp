@@ -84,12 +84,14 @@ function display_setup_form( $error = null ) {
 	$found_table = $wpdb->get_var("SHOW TABLES LIKE '$wpdb->users'");
 	
 	$user_table = ($found_table == $wpdb->users);
+	/** /
 	echo "<pre>";
 	var_dump($wpdb->users);
 	var_dump($found_table);
 	var_dump($user_table);
 	var_dump($wpdb->get_var("SHOW TABLES LIKE '$wpdb->users'"));
 	echo "</pre>";
+	/**/
 	
 	// Ensure that Blogs appear in search engines by default
 	$blog_public = 1;
